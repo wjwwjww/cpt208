@@ -1,0 +1,185 @@
+<script>
+
+import Staticicon from "@/icon/Staticicon.vue";
+import Homeicon from "@/icon/Homeicon.vue";
+import Discovericon from "@/icon/Discovericon.vue";
+export default {
+  components:{
+    Homeicon,
+    Staticicon,
+    Discovericon
+  },
+
+  methods: {
+
+    gotostaticPage() {
+      this.$router.push('/static');
+    },
+    gotomainPage(){
+      this.$router.push('/home')
+    },
+    gotodiscoverPage(){
+      this.$router.push('/discover')
+    }
+  }
+}
+
+
+</script>
+
+<template>
+  <p id="username">username</p>
+  <p id="welcome1">Profile</p>
+  <img  id="account2" src="data:image/png;base64,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">
+  <p id="nickname">nickname</p>
+  <div id="info">
+  <p id="age">Age: 25</p>
+  <p>Weight: 70kg</p>
+  <p>Height: 180cm</p>
+  </div>
+  <p id="Setting">Settings</p>
+<div id="set">
+  <div class="asdf">
+    <img class="choose" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAk0lEQVR4nO3ZsQ3CQBQE0Wnin6D/SogQyCQ4oBwspAsQDbD/NK+CW40D+wySOhjAA7jQfMQOvIEbTRXwnCNewImGHJHCEikskcISKSyRwhIpLJGifBUPUSuU+NjmiH1+rra1rTKkfh6tM42VY0KVZUKVZUKVZUJZJpVlUlkmlWVSLVVmfP2evtPcmHcA138fRFrVAcl0dB8tu9fZAAAAAElFTkSuQmCC">
+
+    <img id="accessibilityicon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFS0lEQVR4nO2a72uWZRTHP48ut1LKTc1gKzL6bZj0Q4Xel5aWy1eW9iKy7U02VhAVpUURqRBogv0DjVi+yZkoWC0iHCvLN9VmaplOKLUUUseKJw58Lzjc3b/3rDXxCzc8931d59zn3OfHda5zPXAJFy+agOXARmAn8ANwGhjWZb+/15jNeQRo5H+CBmA1sAf4G6gWvP4CdgOrgPrxUOBy4DlgyAl1AfgEeEWWuU1f/DJdjXpmY68Cn4om0B8HOvVx/hM8BBxyAvQDTwFXleA1HVgDfOX4/QgsYQxhX2qbe+HXwP015L8Y+Mbx3zoW1rlGgtsL/gSeASZn0LQA3cBZXduBmzJoJgPPAuectWfXSok5MndVWeeOHDSmxKmY4LZnzTno5wEDojkoGUZtiaDEl0qxedAtmh0S3K4ePfsgJ48ZwD6nTGnLNDh3MiWmFqA9Kzr/9a/Vsz8K8JnqlOkvGzPbnDvltUTAGdGai41GkWCZAZcACqfYENh5YiKK7aLvkTItWtGrcruimOcSgGW33ItdWCcsO5XBzcDJhGC/sSTPDhcvuVzsebdORFPsdcDLwEvAIqCSwqdZgX1GV3eGEsZrkfi/EHFLQx3wrWQzpVLR4MqO6GJ3Q0xK/QnYBCzMUCpN+IXiYbw8799ilFmisWNZtdkqlyGiWK+xXmCLmEWVsqp2QQ4FFmhuVPhj4v257tfFKB4y6WNpL9ijSVY7RfGaxqxavR2YBNwHvAMcLVH5huuoeBivSeK9O0ERQ5vGdiUp0aSy+kJCAWir6+9OgP2qgJudi9hXPpJD+COaG1yyWbz2uzn2rutj5GjU/mYkqVBdLgZWiifBGL+nTVJ4oe1D9gJPqprNi+mi2RvZy5zWO+KUCPhMcx+OG9ykQdtPZMECrRX4EDjvhDivZytSaFek0LXm3GCFeN0QN7gzTcsUmHmfUF014oRLgrfkF6p2ZxZ8Z6t4fBQ3OKhB28WVRUsBRaKptQjmiof1Bf6FsEYUrauiyKvIaDBTPH6NGxzW4JQJoEi96xNcvIqcmkCuNSvNtWoR7HGCTgOuSBmvebD3aNA6gGVRiQha0ZZg0BWVYbxMkZkr/YYF0ZpnZXGreJzQ/b1O8Pl6dkL3Nrcs1qctiHlKlCy0i0eX7jc6Rd7Usy7dW/FXFr3isZSEYiwUjUVqJo8gZLtc57BTxHZ2ccoWRZMrGq9MmhTKZ2tjlsGQc5vgVoedQnc597O5ZdAu+o/TJj2uSdaLLYpbXHxU5L/Bj8PvtzQW4sRoiqDiSv2VWQtN2Pk9UPAlbRGXCQ2Me5x1DkmY4IJPF3zHUtH9kqdK7nQbp6z+rsf7Lj68W1Ui8XK3cw+jyYs64IDo1uYhaHBtUiux8+K4iw/vVgHh2dsuTowmLzpFM1DkUCh0K86pOZanj+XjI3x9s0xA1EohTow2C/PdRqzwUcZW9wWsbZmGNS4+ogIHRBXsypkhZyl129zNlECD2kJVNZLTmtiva94bwLspq25wry1aIKvqziRhGtCneX2jOWec7b7GvhTLLHMLX9jGWlsnrtiLHpo+mGKJPs2xWu1qRok5Thlzsztj5pjbvKhF7mc1+pKwWr2sIbVGKwkxcdApkdZRKWyZfpcAOpQOa406ZacQ2H21sERczIQEUFVDuVanrxUdZRxw/DeP9dn7Ymf2qnqxbSX/xdCkxdF3GAdrfFqcaZ2OSCN7WOX1Om185io5TNE1Q4dGj2pOr+sThLJj7Xj9A6JeXfFd2gJUC14jagyuHC8FkjqOy7RW7NDZ40n3pxr7/Z22pxs0N3E/cQlMcPwDHqUjXhXNrrgAAAAASUVORK5CYII=">
+  <p>accessibility</p>
+  </div>
+  <div class="asdf">
+    <img class="choose" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAk0lEQVR4nO3ZsQ3CQBQE0Wnin6D/SogQyCQ4oBwspAsQDbD/NK+CW40D+wySOhjAA7jQfMQOvIEbTRXwnCNewImGHJHCEikskcISKSyRwhIpLJGifBUPUSuU+NjmiH1+rra1rTKkfh6tM42VY0KVZUKVZUKVZUJZJpVlUlkmlWVSLVVmfP2evtPcmHcA138fRFrVAcl0dB8tu9fZAAAAAElFTkSuQmCC">
+
+    <img id="privacyicon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLklEQVR4nO2WzUrDUBCFv5Uboy4KPo3QxpWl2z6JIIXiQujC+jSG2H3foO0z9EcsVBfVnWDkwimE0t6kese66IEDITN3Pu4kcxM4yK9zoAMMgQ9gDvSBa+AMIzWBJZBt8QtwZQH9EuARqALHcg1IFPsEGiHbu1ThG09eSzlvQCUEuJPbaZFS5d6FAI9UzLW3SLFyByHA7yoWlcg9Ua5b82tlslX+/sENYOqZ1109AeplwJOA0JXHu7QqtAtVVCDZcHKl1uCWZ13bCpwofgQ8AM/Aq47UlZ4swFXFu2v3L3Lw2AIcKT7bEFusnVx/Bp4qdmoBrm1ptfO9YpcW4DT3cnW185mu3T2nntU4tT3rbi3nONPIxHrmkdrr22kwcPZD/9+PRD0wfGzx23sQZfUNYutT5BxeJzoAAAAASUVORK5CYII=">
+  <p>Privacy</p>
+  </div>
+  <div class="asdf">
+    <img class="choose" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAk0lEQVR4nO3ZsQ3CQBQE0Wnin6D/SogQyCQ4oBwspAsQDbD/NK+CW40D+wySOhjAA7jQfMQOvIEbTRXwnCNewImGHJHCEikskcISKSyRwhIpLJGifBUPUSuU+NjmiH1+rra1rTKkfh6tM42VY0KVZUKVZUKVZUJZJpVlUlkmlWVSLVVmfP2evtPcmHcA138fRFrVAcl0dB8tu9fZAAAAAElFTkSuQmCC">
+
+    <svg id="preferenceicon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+    <path d="M 9.6660156 2 L 9.2148438 4.4765625 L 9.2285156 4.4707031 L 9.3574219 4.4296875 C 9.3071239 4.442262 9.2639589 4.4626482 9.2148438 4.4765625 C 8.2970203 4.7365804 7.576324 5.2179722 6.9589844 5.7324219 L 6.9257812 5.7617188 L 6.9238281 5.7617188 L 4.5351562 5.0039062 L 2.2382812 8.9863281 L 4.1113281 10.748047 L 4.1191406 10.703125 L 4.1289062 10.658203 C 3.9908562 11.210378 4 11.7 4 12 C 4 12.3 3.9990261 12.795912 4.1191406 13.396484 L 4.1074219 13.332031 L 2.2246094 14.992188 L 4.5527344 19.027344 L 6.9433594 18.158203 L 6.9628906 18.177734 L 7.0449219 18.232422 C 7.6875911 18.660868 8.4330772 19.088227 9.2070312 19.419922 L 9.2109375 19.421875 L 9.6582031 22 L 14.333984 22 L 14.785156 19.523438 L 14.771484 19.529297 L 14.642578 19.570312 C 14.692876 19.557738 14.736041 19.537352 14.785156 19.523438 C 15.70298 19.26342 16.423675 18.782028 17.041016 18.267578 L 17.074219 18.238281 L 17.076172 18.238281 L 19.476562 19.001953 L 21.765625 14.882812 L 19.892578 13.230469 L 19.880859 13.296875 L 19.871094 13.341797 C 20.009129 12.789573 20 12.3 20 12 C 20 11.7 20.0091 11.210382 19.871094 10.658203 L 19.876953 10.683594 L 21.775391 9.0078125 L 19.447266 4.9726562 L 17.056641 5.8417969 L 17.037109 5.8222656 L 16.955078 5.7675781 C 16.312365 5.3391322 15.566923 4.9117728 14.792969 4.5800781 L 14.789062 4.578125 L 14.341797 2 L 9.6660156 2 z M 11.333984 4 L 12.658203 4 L 13.009766 6.0214844 L 14.029297 6.4277344 L 14.005859 6.4199219 C 14.611316 6.6794033 15.240023 7.0391194 15.785156 7.3984375 L 16.542969 8.1582031 L 18.552734 7.4257812 L 19.224609 8.5917969 L 17.722656 9.9179688 L 17.919922 11.103516 L 17.929688 11.142578 C 17.991611 11.390399 18 11.7 18 12 C 18 12.3 17.991597 12.609601 17.929688 12.857422 L 17.923828 12.880859 L 17.707031 13.96875 L 19.234375 15.318359 L 18.523438 16.599609 L 16.523438 15.962891 L 15.746094 16.740234 C 15.202979 17.191429 14.762748 17.47777 14.158203 17.628906 L 14.091797 17.646484 L 13.015625 18.076172 L 12.666016 20 L 11.341797 20 L 10.990234 17.978516 L 9.9707031 17.572266 L 9.9941406 17.580078 C 9.3886846 17.320609 8.7599774 16.960881 8.2148438 16.601562 L 7.4570312 15.841797 L 5.4472656 16.574219 L 4.7753906 15.408203 L 6.2929688 14.068359 L 6.0800781 13.003906 C 6.0001926 12.604479 6 12.3 6 12 C 6 11.7 6.0083605 11.390399 6.0703125 11.142578 L 6.0761719 11.119141 L 6.2890625 10.052734 L 4.7617188 8.6132812 L 5.4648438 7.3964844 L 7.4765625 8.0371094 L 8.2539062 7.2597656 C 8.7970213 6.8085705 9.2372522 6.5222299 9.8417969 6.3710938 L 9.9082031 6.3535156 L 10.984375 5.9238281 L 11.333984 4 z M 12 8 C 10.75 8 9.6852256 8.5047556 9.0019531 9.2734375 C 8.3186806 10.042119 8 11.027778 8 12 C 8 12.972222 8.3186806 13.957881 9.0019531 14.726562 C 9.6852256 15.495245 10.75 16 12 16 C 13.25 16 14.314774 15.495244 14.998047 14.726562 C 15.681319 13.957882 16 12.972222 16 12 C 16 11.027778 15.681319 10.042119 14.998047 9.2734375 C 14.314774 8.5047556 13.25 8 12 8 z M 12 10 C 12.749999 10 13.185226 10.245244 13.501953 10.601562 C 13.81868 10.957882 14 11.472222 14 12 C 14 12.527778 13.81868 13.042119 13.501953 13.398438 C 13.185226 13.754755 12.749999 14 12 14 C 11.250001 14 10.814774 13.754756 10.498047 13.398438 C 10.18132 13.042118 10 12.527778 10 12 C 10 11.472222 10.18132 10.957881 10.498047 10.601562 C 10.814774 10.245245 11.250001 10 12 10 z"></path>
+  </svg>
+  <p>Preference</p>
+  </div>
+  </div>
+
+  <div id="navigate">
+    <button @click="gotomainPage">
+      <Homeicon></Homeicon>
+      Home
+    </button>
+    <button @click="gotostaticPage">
+      <Staticicon></Staticicon>
+      static</button>
+    <button @click="gotodiscoverPage">
+      <Discovericon></Discovericon>
+      Discover</button>
+  </div>
+</template>
+
+<style>
+#username{
+  font-size: 20px;
+  padding-top: 20px;
+  position: relative;
+  text-align: left;
+  margin: 0;
+
+}
+#welcome1{
+  margin-top: 2px;
+  position: relative;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 30px;
+}
+#account2{
+  width: 60%;
+  position: relative;
+  display: block;
+  left: 0px;
+}
+#nickname{
+  position: relative;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 25px;
+
+  border-bottom: 2px solid #222222;
+}
+#info{
+  text-align: left;
+  color: gray;
+}
+#Setting{
+  margin-top: 2px;
+  position: relative;
+
+  text-align: left;
+  font-weight: bolder;
+  font-size: 30px;
+}
+#set{
+  text-align: left;
+  margin-left: 40px;
+  margin-right: 100px;
+  margin-bottom: 80px;
+}
+#accessibilityicon{
+  width: 8%;
+  position: absolute;
+  left: 2px;
+}
+#privacyicon{
+  width: 8%;
+  position: absolute;
+  left: 2px;
+}
+#preferenceicon{
+  width: 8%;
+  height: auto;
+  position: absolute;
+  left: 2px;
+}
+.choose{
+  position: absolute;
+  transform: rotate(180deg);
+  right: 2px;
+  width: 8%;
+}
+.asdf{
+    display: block;
+
+}
+
+
+
+
+
+
+#navigate{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 将容器分成三列，每列的宽度平均 */
+  gap: 0px; /* 可选：设置列之间的间距 */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 10px; /* 可选：为了增加按钮的内边距 */
+  width: 100%; /* 让容器充满整个屏幕宽度 */
+  box-sizing: border-box; /* 让 padding 不会影响容器的宽度 */
+  border-top: 1px solid #ccc; /* 添加一条上边框，颜色可以根据你的设计进行调整 */
+}
+#navigate button{
+  padding: 10px 20px;
+
+  font-size: 16px;
+
+  background-color: white;
+  border: none;
+
+  cursor: pointer;
+}
+#navigate button:hover {
+  background-color: #0056b3;
+}
+</style>
